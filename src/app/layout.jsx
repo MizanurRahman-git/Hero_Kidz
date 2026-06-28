@@ -15,8 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.className} h-full antialiased`}>
-      <body className="py-2 md:w-11/12 mx-auto space-y-3.5">
-        <header>
+      <body>
+        <header className="py-2 md:w-11/12 mx-auto space-y-3.5">
           <Navber />
         </header>
         <main>{children}</main>
