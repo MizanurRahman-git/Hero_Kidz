@@ -1,7 +1,28 @@
 import React from "react";
 import Logo from "./Logo";
-
+import NavLinks from "../buttons/NavLinks";
+import Link from "next/link";
+import { FaCartShopping } from "react-icons/fa6";
 const Navber = () => {
+  const nav = (
+    <>
+      <li>
+        <NavLinks href={"/"}>Home</NavLinks>
+      </li>
+      <li>
+        <NavLinks href={"/products"}>Products</NavLinks>
+      </li>
+      <li>
+        <NavLinks href={"/blog"}>Blog</NavLinks>
+      </li>
+      <li>
+        <NavLinks href={"/contact"}>Contact</NavLinks>
+      </li>
+      <li>
+        <NavLinks href={"/aboutus"}>About Us</NavLinks>
+      </li>
+    </>
+  );
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -27,52 +48,19 @@ const Navber = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {nav}
           </ul>
         </div>
-        <Logo/>
+        <Logo />
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2 bg-base-100 w-40 z-1">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{nav}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end space-x-1.5">
+        <Link href={"/cart"} className="btn btn-primary">
+          <FaCartShopping />
+        </Link>
+        <Link href={"/login"}><button className="btn btn-primary btn-outline">Login</button></Link>
       </div>
     </div>
   );
