@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="flex justify-between items-center">
       <div className="flex-1 space-y-4">
         <h2 className={`${fontBangla.className} text-6xl font-bold`}>
-          আপনার শিশুকে দিন একটি 
+          আপনার শিশুকে দিন একটি
           <span className="text-primary"> সুন্দর ভবিষ্যৎ</span>{" "}
         </h2>
         <p>Buy Every Toy With Up To 15% Discount</p>
