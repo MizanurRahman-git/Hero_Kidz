@@ -1,7 +1,7 @@
 const uri = process.env.MONGO_URI;
 const dbName = process.env.DBNAME;
 
-const collections = {
+export const collections = {
     PRODUCTS: "products",
 }
 const { MongoClient, ServerApiVersion } = require("mongodb");

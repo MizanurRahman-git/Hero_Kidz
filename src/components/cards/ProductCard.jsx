@@ -7,7 +7,7 @@ import { FaStar, FaShoppingCart } from "react-icons/fa"
 const ProductCard = ({product}) => {
   const { title, image, price, ratings, reviews, sold } = product;
   return (
-    <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300">
+    <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
       <figure className="relative h-56 bg-base-200">
         <Image src={image} alt={title} fill  />
       </figure>
