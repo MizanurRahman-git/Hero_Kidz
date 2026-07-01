@@ -1,10 +1,9 @@
-
 const uri = process.env.MONGO_URI;
 const dbName = process.env.DBNAME;
 
 export const collections = {
-    PRODUCTS: "products",
-}
+  PRODUCTS: "products",
+};
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const client = new MongoClient(uri, {
@@ -16,5 +15,5 @@ const client = new MongoClient(uri, {
 });
 
 export const dbConnect = (cname) => {
-    return client.db(dbName).collection(cname)
-}
+  return client.db(dbName).collection(cname);
+};

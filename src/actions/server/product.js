@@ -1,4 +1,5 @@
-"use server";
+"use server"
+
 import { collections, dbConnect } from "@/lib/dbConnect";
 import { ObjectId } from "mongodb";
 
