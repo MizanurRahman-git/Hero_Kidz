@@ -1,15 +1,9 @@
-import { getSingleProduct } from '@/actions/server/product';
-import React from 'react';
+import React from "react";
 
-const ProductDetails =async ({params}) => {
-    const {id} = await params
-    const product = await getSingleProduct(id)
+const ProductDetails = async () => {
+  return <div>
     
-    return (
-        <div>
-            
-        </div>
-    );
+  </div>;
 };
 
 export default ProductDetails;
