@@ -1,21 +1,19 @@
-"use client"
+"use client";
 
 import React from "react";
-import Image from "next/image"
-import { FaStar, FaShoppingCart } from "react-icons/fa"
+import Image from "next/image";
+import { FaStar, FaShoppingCart } from "react-icons/fa";
 
-const ProductCard = ({product}) => {
+const ProductCard = ({ product }) => {
   const { title, image, price, ratings, reviews, sold } = product;
   return (
     <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
       <figure className="relative h-56 bg-base-200">
-        <Image src={image} alt={title} fill  />
+        <Image src={image} alt={title} fill />
       </figure>
 
       <div className="card-body">
-        <h2 className="card-title text-base line-clamp-2 min-h-12">
-          {title}
-        </h2>
+        <h2 className="card-title text-base line-clamp-2 min-h-12">{title}</h2>
 
         <div className="flex items-center justify-between text-sm text-gray-500">
           <div className="flex items-center gap-1">
