@@ -9,7 +9,7 @@ export default function Home() {
         <Banner />
       </section>
       <section>
-        <Products/>
+        <Products />
       </section>
     </div>
   );
